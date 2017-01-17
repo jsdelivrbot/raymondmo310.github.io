@@ -2,11 +2,14 @@ img {
     width: 200px;
 }
 
-body {
-     text-align: center;
-}
+
+   
 
 body {
      text-align: center;
-     font-family: "Arial";
+     color: rgb(400,200,100)
+}
+body {
+     text-align: center;
+     font-family: "Comic Sans";
 }
