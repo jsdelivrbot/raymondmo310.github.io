@@ -12,3 +12,11 @@ function delegateKeypress(event) {
         $("#easy").trigger("click");
     }
 }
+
+var websites = ["leaf-lettuce.github.io"];
+
+function randomWebsite() {
+    var website = websites[Math.floor(Math.random()*websites.length)];
+    window.location = website;
+}
+
