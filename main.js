@@ -1,16 +1,16 @@
-var NUM_CIRCLES = 25;
+var NUM_CIRCLES = 12
 
 var circleDiameter;
 var circleRadius;
-
+    
 var rVal;
 var gVal;
 var bVal;
 
 function setup() {
-  createCanvas(480, 600);
+  createCanvas(300, 100);
 
-  frameRate(15);
+  frameRate(6);
 
   circleDiameter = width/NUM_CIRCLES;
   circleRadius = circleDiameter/2;
@@ -37,7 +37,7 @@ function draw() {
     while (x <= width) {
       stroke(color(rVal, gVal, bVal));
       fill(color(rVal, gVal, bVal));
-      ellipse(x, y, 100, 200);
+      ellipse(x, y, 25, 25);
       x = x + circleDiameter;
     }
 
