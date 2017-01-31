@@ -4,7 +4,7 @@ var isGameOver;
 
 function setup() {
     isGameOver = false
-    createCanvas(250,250);
+    createCanvas(500,500);
     player = createSprite(width/2, height-25, 50, 50);
     enemy = createSprite(width/2, 0, 10, 30)
 }
@@ -15,19 +15,27 @@ function draw() {
     } else {
     
     if (enemy.overlap(player)) {
-        isGameOver = true
+        isGameOver = true;
     }
     
     background(20,75,105);
     
+    if (keyDown(DOWN_ARROW) && player.position.y > height-500) {
+        player.position.y = player.position.y + 1;
+    }
+    
+    if (keyDown(UP_ARROW) && player.position.y > height-500) {
+        player.position.y = player.position.y - 1;
+    }
+    
     if (keyDown(RIGHT_ARROW) && player.position.x < width-25) {
-        player.position.x = player.position.x + 1;
+        player.position.x = player.position.x + 5;
     }
     
     if (keyDown(LEFT_ARROW) && player.position.x > 25) {
-        player.position.x = player.position.x - 1;
+        player.position.x = player.position.x - 5;
     }
-        enemy.position.y = enemy.position.y + 3;
+        enemy.position.y = enemy.position.y + 7;
         
         if (enemy.position.y > height) {
             enemy.position.y = 0;
