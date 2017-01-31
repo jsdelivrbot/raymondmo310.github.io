@@ -4,11 +4,13 @@ img {
 
 body {
      text-align: center;
-     color: rgb(400,200,100)
+     color: rgb(400,200,100);
+     outline-color: rgb(200,0,0)
 }
 body {
      text-align: center;
      font-family: "Arial";
+     background-color: rgb(325,125,25)
      
 }
 
