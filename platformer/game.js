@@ -19,7 +19,7 @@ function preload() {
 function setup() {
     isGameOver = false;
     score = 0
-    createCanvas(400, 300);
+    createCanvas(1000, 700);
     background(150, 200, 250);
     groundSprites = new Group();
     player = createSprite(width / 2, height - (playerImage.height / 2), 0, 0);
@@ -75,7 +75,7 @@ function draw() {
         firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites*firstGroundSprite.width;
         groundSprites.add(firstGroundSprite);
     }
-     if (random() > 0.97) {
+     if (random() > 0.90) {
         var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30)
         obstacleSprites.add(obstacle);
          }
