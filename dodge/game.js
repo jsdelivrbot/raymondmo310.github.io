@@ -3,11 +3,12 @@ var playerImage;
 var enemy;
 var enemyImage;
 var backgroundImage;
+var isGameOver;
 
 function preload() {
   playerImage = loadImage("cat.jpg");
   enemyImage = loadImage("water.jpg");
-  backgroundImage = loadImage("https://surrogate.hackedu.us/i.imgur.com/aKQOg3G.png");
+
 }
 
 function setup() {
@@ -30,7 +31,7 @@ function draw() {
     if (enemy.overlap(player)) {
       gameOver();
     }
-    background(backgroundImage);
+    background(0, 0, 100);
     
      if (keyDown(DOWN_ARROW) && player.position.y > height-500) {
         player.position.y = player.position.y + 1;
