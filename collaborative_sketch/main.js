@@ -34,6 +34,7 @@ function draw() {
     
     for (var i = 0; i < points.length; i++) {
         var point = points[i];
+        fill('blue')
         ellipse(point.x, point.y, 5, 5);
         
     }
